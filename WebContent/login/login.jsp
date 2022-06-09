@@ -14,7 +14,7 @@
 				<!-- 로그인 윗부분 -->
 				<div class="signForm_top">
 					<div class="signIn_header">
-						<img src="logo.png">
+						<img src="../logo.png">
 					</div>
 				</div>
 				<!-- 로그인 입력 부분 -->
@@ -34,7 +34,15 @@
 					
 					<div class="signForm_submit">
 						<button id="signForm_login" class="login_button">
-							<span class="login_submit_text"><b>로그인 하기</b></span>
+							<span class="login_submit_text"><b>로그인</b></span>
+						</button>
+					</div>
+				</div>
+				<!-- 카카오 로그인 -->
+				<div class="social-login">
+					<div class="kakao-login">
+						<button class="kakao-login-btn">
+							카카오계정으로 로그인
 						</button>
 					</div>
 				</div>
@@ -47,6 +55,8 @@
 						<a href="#">회원가입</a>
 					</span>
 				</p>
+				
+				
 			</div>
 		</div>
 	</div>
