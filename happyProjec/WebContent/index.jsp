@@ -75,7 +75,7 @@
 </style>
 </head>
 <body>
-	<%@include file ="/header_before.jsp" %>
+	<%@include file ="/header.jsp" %>
 	
 	<!-- carousel 시작 -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -167,9 +167,9 @@
 	
 		<div class="mx-auto mt-3 search-bar input-group mb-3"
 			style="font-family: 'SUIT-Medium'" id="search">
-			<input id="serchinput" type="text" name="query" value="" class="form-control rounded-pill"
-				placeholder="여행지를 입력하세요. ex)여수, 춘천 등"> <span id="searchclear"
-				class="glyphicon glyphicon_remove-circle"></span>
+			<input id="serchinput" type="text" name="query" value="" class="form-control rounded-pill" placeholder="여행지를 입력하세요. ex)여수, 춘천 등"
+				button> 
+			<span id="searchclear" class="glyphicon glyphicon_remove-circle"></span>
 			<div class="input-group-append"></div>
 		</div>
 	</form>
