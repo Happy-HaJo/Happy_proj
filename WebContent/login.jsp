@@ -47,8 +47,6 @@
 						<a href="#">회원가입</a>
 					</span>
 				</p>
-				
-				
 			</div>
 		</div>
 	</div>
