@@ -56,21 +56,8 @@
 }
 
 #search{
-	width: 40%;
+	width: 500px;
 }
-
-#searchclear {
-	position: absolute;
-	right: 5px;
-	top: 0;
-	bottom: 0;
-	height: 14px;
-	margin: auto;
-	font-size: 14px;
-	cursor: pointer;
-	color: #ccc;
-}
-
 
 </style>
 </head>
@@ -167,17 +154,13 @@
 	
 		<div class="mx-auto mt-3 search-bar input-group mb-3"
 			style="font-family: 'SUIT-Medium'" id="search">
-			<input id="serchinput" type="text" name="query" value="" class="form-control rounded-pill" placeholder="여행지를 입력하세요. ex)여수, 춘천 등"
-				button> 
-			<span id="searchclear" class="glyphicon glyphicon_remove-circle"></span>
-			<div class="input-group-append"></div>
+			<input id="serchinput" type="text" name="query" value="" class="form-control rounded-pill" placeholder="여행지를 입력하세요. ex)여수, 춘천 등"> 
+			<span class="input-group-btn" id="search_button">
+				<button type="button" class="mx-2 btn btn-outline-primary rounded-pill">검색</button>
+			</span>
 		</div>
 	</form>
-	<script>
-		$("#searchclear").click(function() {
-			$("#searchinput").val('');
-		});
-	</script>
+
 	<!-- 검색바 끝 -->
 
 	<!-- select zone -->

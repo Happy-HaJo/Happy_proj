@@ -85,9 +85,9 @@
 	 <form class="form-signin" style="text-align:center">
 		  <img class="mb-4" src="/images/logo.png" alt="로고" width="250" height="180">
 		  <h1 class="h3 mb-3 font-weight-normal" style="font-family: 'SUIT-Bold'">비밀번호 찾기</h1>
-		  <h6 class="h3 mb-3 font-weight-normal" style="font-family: 'SUIT-Medium'">
-		  	회원님의 이메일을 입력해주세요.
-		  </h6>
+		  <h4 class="h3 mb-3 font-weight-light" style="font-family: 'SUIT-Medium'">
+		  	가입하실 때 사용한 회원님의 이메일(아이디)을 입력해주세요.
+		  </h4>
 		  <label for="inputEmail" class="sr-only">Email address</label>
 		  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
 		  <label for="inputPassword" class="sr-only">Password</label>
