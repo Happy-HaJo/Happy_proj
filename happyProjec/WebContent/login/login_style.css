@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'SUIT-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SUIT-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.login_content{
+	display: block;
+	min-height: 83vh;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+.signIn{
+	position: relative;
+	padding: 9rem 0;
+	box-sizing: inherit;
+}
+
+.signIn_form{
+	padding: 4rem 12.3rem 16.1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 108.2rem;
+	margin: 0 auto;
+	text-align: center;
+	border-radius: 1.5rem;
+	box-sizing: inherit;
+}
+
+/* signIn_header */
+.signIn_header{
+	margin-bottom: 2.4rem;
+	box-sizing: inherit;
+}
+
+img{
+	vertical-align: middle;
+}
+
+/* signForm_middle */
+.signForm_middle{
+	
+}
+
+.titleText{
+	text-align: left;
+	color: #545454;
+	margin-top: 0.4rem;
+	font-family: 'SUIT-Light';
+	color: #00AFFF;
+}
+
+.inputText{
+	position: relative;
+	font-family: 'SUIT-Light';
+	margin-bottom: 25px;
+}
+
+input{
+	font-size: 0.9rem;
+	padding: 0.5rem;
+	appearance: none;
+	border: none;
+	border-bottom: 0.1rem solid #dde0ea;
+	border-radius: 0;
+	box-shadow: none;
+	width: 100%;
+	height: 2rem;
+	color: #545454;
+	writing-mode: horizontal-tb;
+}
+
+.signForm_submit{
+	position: relative;
+}
+
+.login_button{
+	width: 26rem;
+	border-radius: 0.7rem;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem 2.8rem;
+	border: none;
+	cursor: pointer;
+	background-color: #C8FAC8;
+	font-family: 'SUIT-Bold';
+}
+
+.login_submit_text{
+	display: inline-block;
+	font-size: 20px;
+	color: #2C952C;
+}
+
+/* signForm_bottom */
+.signForm_bottom{
+	margin-top: 15px;
+	margin-bottom: 20px;
+	justify-content: center;
+	display: flex;
+}
+
+p{
+	margin: 0;
+	line-height: 1.6;
+}
+
+span{
+	font-style: inherit;	
+}
+
+.signForm_bottom .find-pw{
+	line-height: 1.38;
+	letter-spacing: -.3px;
+	font-size: 13px;
+	font-weight: 400;
+	cursor: pointer;
+	border-bottom: 1px solid #858a8d;
+}
+
+.signForm_bottom .signUp-btn{
+	margin-left: 16px;
+	line-height: 1.38;
+	letter-spacing: -.3px;
+	font-size: 13px;
+	font-weight: 400;
+	cursor: pointer;
+	border-bottom: 1px solid #858a8d;
+}
+
+.signForm_bottom .find-pw a{
+	color: #616568;
+	text-decoration: none;
+	font-family: 'SUIT-Medium';
+}
+
+.signForm_bottom .signUp-btn a{
+	color: #616568;
+	text-decoration: none;
+	font-family: 'SUIT-Medium';
+}
+
+/* 카카오로그인 */
+.social-login{
+	position: relative;
+}
+
+.kakao-login{
+	display: flex;
+	flex-direction: row;
+	margin-top: 13px;
+}
+
+.kakao-login-btn{
+	width: 26rem;
+	border: 0;
+	background: #FFEB5A;
+	font-size: 15px;
+	color: #2e2e2e;
+	line-height: 2.4rem;
+	border-radius: 0.7rem;
+	text-align: center;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+    padding: 0.5rem 2.8rem;
+    font-family: 'SUIT-Bold';
+}
+
+/* line-text */
+.social-login-line{
+	position: relative;
+	bottom: -8px;
+	display: block;
+	margin: 0;
+	height: 1px;
+	border: none;
+}
+
+.social-login-line-text{
+	font-family: 'SUIT-Medium';
+	color: #616568;
+	font-size: 13px;
+}
+
