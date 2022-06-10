@@ -11,12 +11,14 @@
 	<div class="login_content">
 		<div class="signIn">
 			<div class="signIn_form">
+			
 				<!-- 로그인 윗부분 -->
 				<div class="signForm_top">
 					<div class="signIn_header">
 						<img src="../logo.png">
 					</div>
 				</div>
+				
 				<!-- 로그인 입력 부분 -->
 				<div class="signForm_middle">
 					<form>
