@@ -15,7 +15,7 @@
 				<!-- 로그인 윗부분 -->
 				<div class="signForm_top">
 					<div class="signIn_header">
-						<img src="../logo.png">
+						<img src="../images/logo.png">
 					</div>
 				</div>
 				
@@ -40,6 +40,14 @@
 						</button>
 					</div>
 				</div>
+				<!-- 카카오 로그인 -->
+				<div class="social-login">
+					<div class="kakao-login">
+						<button class="kakao-login-btn">
+							카카오계정으로 로그인
+						</button>
+					</div>
+				</div>
 				<!-- 비밀번호 찾기, 회원가입 -->
 				<p class="signForm_bottom">
 					<span class="find-pw">
@@ -49,17 +57,6 @@
 						<a href="#">회원가입</a>
 					</span>
 				</p>
-				<!-- 간편 로그인 라인 -->
-				<hr class="social-login-line">
-				
-				<!-- 카카오 로그인 -->
-				<div class="social-login">
-					<div class="kakao-login">
-						<button class="kakao-login-btn">
-							카카오계정으로 로그인
-						</button>
-					</div>
-				</div>
 				
 			</div>
 		</div>

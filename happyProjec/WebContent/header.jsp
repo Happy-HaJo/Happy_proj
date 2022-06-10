@@ -23,6 +23,8 @@
     font-style: normal;
 	}  
 	
+
+	
 	.navbar-brand{
 		margin-left: 4%;
 	}
@@ -32,7 +34,7 @@
 		margin-right: 70px;
 	}
 	
-	.bg-light{
+	.bg{
 		background-color: white !important;
 		box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
 		-webkit-box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
@@ -41,7 +43,7 @@
 	.navbar-light .navbar-nav .nav-link{
 		font-family: 'SUIT-Medium';
 		font-size: 1.1rem;
-		color: #545454;
+		color: #545454 !important;
 		letter-spacing: 2px;
 	}
 	
@@ -64,7 +66,7 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-light bg">
 	  <a class="navbar-brand" href="#">
 	  	<img src="/images/logo.png" width="110px" height="58px">
 	  	<span class="logo-text">국내여행 플래너</span>
