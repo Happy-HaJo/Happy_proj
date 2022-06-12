@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="css/layout_2nd.css">
+<link rel="stylesheet" href="css/calendar.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="./js/Seoul.js"></script>
+
+<title>Seoul</title>
+
+
+</head>
+<body>
+ <div id="fonts_in_my_computer">
+   <div class="Image_Title_Intro">
+	<div>
+	<img class="Region_Image" src="img/seoul.jpg" alt="My Image">
+
+
+	</div>
+
+	<div class = "Title_And_Introduce">
+	<h1>서울</h1>
+	<h2>Seoul</h2><br><br><br>
+	<p>
+		과거와 현재가 공존하며 하루가 다르게 변하는 서울을 여행하는 일은 매일이 새롭다.<br>
+		 도시 한복판에서 600년의 역사를 그대로 안고 있는 아름다운 고궁들과 더불어 대한<br>민국의
+		 트렌드를  이끌어나가는 예술과 문화의 크고 작은 동네들을 둘러볼 수 있는<br> 서울은 도시 여행에
+		 최적화된 장소다.
+	</p>
+	</div>
+  </div>		
+  <!-- 캘린더 -->
+ <div class="calendar">
+	<div class="header">
+		<button class="calendar_btn" onclick="prevCal();">&lt;</button>
+		<div class="title"><span class="year"></span><span class="month"></span></div>
+		<button class="calendar_btn" onclick="nextCal();">&gt;</button>
+	</div>
+	<div class="day">
+		<div>일</div>
+		<div>월</div>
+		<div>화</div>
+		<div>수</div>
+		<div>목</div>
+		<div>금</div>
+		<div>토</div>
+			</div>
+		<div class="dates"></div>
+		
+	</div>
+	<!-- 지도 api현재 사진으로 대체-->
+<img class = "map_image"src="img/map_image.jpg" alt="My Image">
+
+	<!-- 추천장소 -->
+<div class="search">
+	     		<input class="text_search" type="text" placeholder="검색어를 입력하세요.">
+<!-- 	     		<div class="button_search"> -->
+<!--      				<button>검색</button> -->
+<!-- 				</div><br> -->
+				<span class="search_icon">
+					<i class="fa fa-search fa-2x"></i>
+				</span>
+	     		
+			<h1 class="region_recommend" > 추천장소</h1>
+			<div class="tra_api">
+				<form action="lib.do" method="post">
+					<input type="hidden" name="command" value="listdb">
+					<table border="1">
+						<thead>
+						</thead>
+						<tbody>
+						<tbody>
+					</table>
+				</form>
+			</div>
+</div>
+<script type="text/javascript">
+		var CDate = new Date();
+		var today = new Date();
+		var selectCk = 0;
+		
+		var buildcalendar = function(){
+			var htmlDates = '';
+			var prevLast = new Date(CDate.getFullYear(), CDate.getMonth(), 0); //지난 달의 마지막 날
+			var thisFirst = new Date(CDate.getFullYear(), CDate.getMonth(), 1); //이번 달의 첫쨰 날
+			var thisLast = new Date(CDate.getFullYear(), CDate.getMonth() + 1, 0); //이번 달의 마지막 날
+			document.querySelector(".year").innerHTML = CDate.getFullYear() + "년";  // year에 년도 출력
+			document.querySelector(".month").innerHTML = (CDate.getMonth() + 1) + "월";  //month에 월 출력
+			const dates = [];
+			if(thisFirst.getDay()!=0){
+				for(var i = 0; i < thisFirst.getDay(); i++){
+					dates.unshift(prevLast.getDate()-i); // 지난 달 날짜 채우기
+				}
+			}
+			for(var i = 1; i <= thisLast.getDate(); i++){
+					 dates.push(i); // 이번 달 날짜 채우기
+			}
+			for(var i = 1; i <= 13 - thisLast.getDay(); i++){
+					 dates.push(i); // 다음 달 날짜 채우기 (나머지 다 채운 다음 출력할 때 42개만 출력함)
+			}
+		
+			for(var i = 0; i < 42; i++){
+				if(i < thisFirst.getDay()){
+					htmlDates += '<div class="date last">'+dates[i]+'</div>';
+				}else if(today.getDate()==dates[i] && today.getMonth()==CDate.getMonth() && today.getFullYear()==CDate.getFullYear()){
+					 htmlDates += '<div id="date_'+dates[i]+'" class="date today" onclick="fn_selectDate('+dates[i]+');">'+dates[i]+'</div>';
+				}else if(i >= thisFirst.getDay() + thisLast.getDate()){
+					 htmlDates += '<div class="date next">'+dates[i]+'</div>';
+				}else{
+					htmlDates += '<div id="date_'+dates[i]+'" class="date" onclick="fn_selectDate('+dates[i]+');">'+dates[i]+'</div>';
+				}
+			 }
+		document.querySelector(".dates").innerHTML = htmlDates;
+		}
+		
+		function prevCal(){
+			 CDate.setMonth(CDate.getMonth()-1);
+			 buildcalendar();
+		}
+		function nextCal(){
+			 CDate.setMonth(CDate.getMonth()+1);
+			 buildcalendar();
+		}
+		
+		function fn_selectDate(date){
+		
+			var year = CDate.getFullYear();
+			var month = CDate.getMonth() + 1;
+			var date_txt = "";
+			if(CDate.getMonth + 1 < 10){
+				month = "0" + (CDate.getMonth() + 1);
+			}
+			if(date < 10){
+				date_txt = "0" + date;
+			}
+		
+			if(selectCk == 0){
+				$(".date").css("background-color", "");
+				$(".date").css("color", "");
+				$("#date_"+date).css("background-color", "red");
+				$("#date_"+date).css("color", "white");
+		
+				$("#period_1").val(year+"-"+month+"-"+date);
+				$("#period_2").val("");
+				selectCk = date;
+			}else{
+				$("#date_"+date).css("background-color", "red");
+				$("#date_"+date).css("color", "white");
+				for(var i = selectCk + 1 ; i < date ; i++){
+					$("#date_"+i).css("background-color", "#FFDDDD");
+				}
+		
+				$("#period_2").val(year+"-"+month+"-"+date);
+				selectCk = 0;
+			}
+		
+		}
+		
+		buildcalendar();
+ </script>
+
+
+  </div>
+</body>
+</html>
